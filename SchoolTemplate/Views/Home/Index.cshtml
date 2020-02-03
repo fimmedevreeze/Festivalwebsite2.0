@@ -5,7 +5,14 @@
 }
 
 <div class="text-center">
-  <h1 class="display-4">Deze site is kaulo geil</h1>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Index.cshtml*">Home</a>
+        <a href="">Information</a>
+        <a href="">About us</a>
+        <a href="">Contact</a>
+    </div>
+  <h1 class="display-4">Dit is een hele mooie site die nog wat aanpassingen nodig heeft</h1>
   <ul>
     @foreach (Product p in Model)
     {
