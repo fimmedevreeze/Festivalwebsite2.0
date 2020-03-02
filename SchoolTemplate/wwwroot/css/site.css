@@ -1,56 +1,126 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿html {
+    background-image: linear-gradient( #D264E9, #6EC6CE );
+    background-repeat: no-repeat;
+    Min-height: 100%;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.title {
+    font-size: 30px;
+    margin-top: 30px;
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    .title h1 {
+        color: #0005BC;
+        display: inline-block;
+        position: relative;
+        left: calc(50% - 163.29px);
+        margin: 0px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+
+header {
+    background: url("https://solarweekend.com/wp-content/uploads/2019/05/SOL19-nogtweeweken-insta-fb2.png");
+    height: 70vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-repeat: no-repeat;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.poster {
+    position: relative;
+    display: inline-block;
+    left: calc(50% - 750px);
+    z-index: -1;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.topnav a {
+    position: relative;
+    left: calc(50% - 190px);
+    text-decoration: none;
+    color: White;
+    padding-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+    .topnav a:hover {
+        color: #6377F9;
+        transition: 500ms ease;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .topnav a.active:hover {
+        color: #6377F9;
+        transition: 500ms ease;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .topnav a.active {
+        color: #1930C6;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+.footer .instagram h3 {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    bottom: 10px;
+    left: calc(50% - 81.15px);
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+.footer .facebook h3 {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    bottom: 30px;
+    left: calc(50% - 81.15px);
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+
+.footer .instagram img {
+    position: relative;
+    left: calc(50% - 81.15px);
+    top: 20px;
+}
+
+.footer .facebook img {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    left: calc(50% - 81.15px);
+}
+
+.bar {
+    transition: all 500ms ease;
+}
+
+.dropdown .bar:hover {
+    transform: rotate(30deg);
+}
+
+.dropdown {
+    position: absolute;
+    left: calc(50% - 749px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    background-color: #f1f1f1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
 }

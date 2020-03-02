@@ -1,27 +1,49 @@
-﻿@using SchoolTemplate.Database;
-@model List<Product>
-@{
-  ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Aggaveld</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-<div class="text-center">
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="Index.cshtml*">Home</a>
-        <a href="">Information</a>
-        <a href="">About us</a>
-        <a href="">Contact</a>
+<body>
+
+    <header>
+        <div class="title">
+            <h1>SummerFest</h1>
+        </div>
+
+        <div class="topnav">
+            <h2>
+                <a class="active" href="index.html">Home</a>
+                <a class="inactive" href="info.html">Info</a>
+                <a class="inactive" href="programma.html">Programma</a>
+                <a class="inactive" href="contact.html">Contact</a>
+            </h2>
+        </div>
+    </header>
+
+    <div class="dropdown">
+        <div class="bar">
+            <img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" alt="hamburger" width="50" height="50">
+        </div>
+        <div class="dropdown-content">
+            <a href="Winterfest">Winterfest</a>
+            <a href="Springbreak">Springbreak</a>
+            <a href="Summerfest">Summerfest</a>
+        </div>
     </div>
-  <h1 class="display-4">Dit is een hele mooie site die nog wat aanpassingen nodig heeft</h1>
-  <ul>
-    @foreach (Product p in Model)
-    {
-      <li>
-        @p.Naam @p.Prijs euro
-      </li>
-    }
-  </ul>
-  <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> 
 
-.
+    <div class="footer">
+        <div class="instagram">
+            <img src="https://www.freepnglogos.com/uploads/instagram-logo-png-transparent-0.png" alt="Instagrampng" width="70" height="70">
+            <h3>Aggaveld</h3>
+        </div>
+        <div class="facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/480px-Facebook_logo_%28square%29.png" alt="facebookpng" width="50" height="50">
+            <h3>Aggaveld</h3>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -5,3 +5,19 @@ public IActionResult Show()
     return View() ;
 }
 
+
+DIT KOMT UIT INDEX
+@using SchoolTemplate.Database;
+@model List<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<ul>
+    @foreach (Product p in Model)
+    {
+        <li>
+            @p.Naam @p.Prijs euro
+        </li>
+    }
+</ul>
