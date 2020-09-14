@@ -3,73 +3,62 @@
     background-repeat: no-repeat;
     Min-height: 100%;
 }
+body {
+    font-family: Palatino Linotype;
+    background-image: url("bg.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 10%;
+    width: 80%;
+    min-width: 980px;
+    border: 1px solid #fff;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+}
 .title {
     font-size: 60px;
     position: center center;
     margin-left: 0;
     border: 1px solid #fff;
     border-radius: 10px 10px 10px 10px;
-    display: inline-block;
+    display: block;
+    background-color: #1E90FF;
+    overflow: hidden;
 }
 .title h1 {
     color: #fff;
     display: inline-block;
     position: relative;
     left: calc(50% - 280px);
-    margin: 0px;
+    margin: 20px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
-body {
-    font-family: Palatino Linotype;
-    background-image: url("bg.jpg");
-    background-color: rgba(255, 255, 255, 0.6);
-    margin-left: 12%;
-    width: 75%;
-    min-width: 980px;
+.topnav {
+    background-color: #fff;
+    font-size: 10px;
+    position: center center;
+    margin-left: 0;
     border: 1px solid #fff;
     border-radius: 10px 10px 10px 10px;
-    display: inline-block;
-}
-.topnav {
-    background-color: #1E90FF;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Fredoka One';
+    letter-spacing: 30%;
 }
 .topnav a {
-    float: left;
     color: #1E90FF;
     text-align: center;
     padding: 20px 25px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     }
-.topnav a:hover {
-    background-color: #1E90FF;
-           
-        }
+
 
 .topnav a.active {
     background-color: #1b2a46;
     color: white;
 }
 
-.title {
-    background-color: #1E90FF;
-    overflow: hidden;
-}
-.title a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 25px;
-    text-decoration: none;
-    font-size: 25px;
-    }
-
-
-
-.title {
-    display: block;
-}
 
 header {
     background: url("https://solarweekend.com/wp-content/uploads/2019/05/SOL19-nogtweeweken-insta-fb2.png");
@@ -89,79 +78,6 @@ header {
     left: calc(50% - 750px);
     z-index: -1;
 }
-
-.topnav a {
-    position: relative;
-    left: calc(50% - 190px);
-    text-decoration: none;
-    color: White;
-    padding-left: 10px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-    .topnav a:hover {
-        color: #6377F9;
-        transition: 500ms ease;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-
-    .topnav a.active:hover {
-        color: #6377F9;
-        transition: 500ms ease;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-
-    .topnav a.active {
-        color: #1930C6;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-
-.topnav {
-    min-width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: -1%;
-    margin-left: -2%;
-    background-color: black;
-    color: white;
-    padding: 0.4%;
-    font-family: 'Fredoka One';
-    letter-spacing: 20%;
-}
-
-    .topnav > div {
-        margin: 0 4% 0 4%;
-        padding: 2% 4% 2% 19%;
-        font-size: 80px;
-        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    }
-
-img[target="topnav"] {
-    margin-left: 3%;
-}
-
-nav {
-    background-color: #f5daf7;
-    font-family: 'Fredoka One';
-    display: flex;
-    flex-direction: row;
-    min-width: 4%;
-    margin: 0 -1% 0 -1%;
-    padding: 0 5% 0 5%;
-}
-
-    nav > div {
-        color: #ee1960;
-        margin: 0 2% 0 2%;
-        padding: 2% 0.5% 2% 0.5%;
-        font-size: 200%;
-        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    }
-
-img[target="topnav"] {
-    margin-left: 3%;
-}
-
 .footer .instagram h3 {
     display: inline-block;
     position: relative;
