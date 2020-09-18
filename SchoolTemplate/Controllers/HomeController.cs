@@ -13,7 +13,6 @@ namespace SchoolTemplate.Controllers
   
     string connectionString = "Server=172.16.160.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
 
-
     public IActionResult Index()
     {
       List<Product> products = new List<Product>();
@@ -27,8 +26,7 @@ namespace SchoolTemplate.Controllers
       return View();
     }
 
-
-    [Route("festival/(id)")]
+        [Route("festival/(id)")]
     public IActionResult Festival(string id)
     {
         ViewData["id"] = id;
