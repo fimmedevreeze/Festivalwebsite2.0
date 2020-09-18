@@ -16,18 +16,26 @@ body {
 }
 .title {
     font-size: 50px;
-    position: center center;
-    border: 1px solid #fff;
-    border-radius: 0px 0px 10px 10px;
-    display: block;
-    background-color: #1E90FF;
-    overflow: hidden;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -1%;
+    margin-left: -2%;
+    margin-right: -2%;
+    background-color: black;
+    color: white;
+    padding: 0.4%;
+    font-family: 'Fredoka One';
 }
-.title h1 {
-    color: #fff;
-    display: inline-block;
-    position: relative;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    .title h1 {
+        color: #fff;
+        display: inline-block;
+        position: center;
+        flex-direction: row;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        align-content: center;
+
+
     }
 
 .topnav {
@@ -36,7 +44,8 @@ body {
     flex-direction: row;
     margin-top: -1%;
     margin-left: -2%;
-    background-color: black;
+    margin-right: -2%;
+    background-color: #ffdab3;
     color: white;
     padding: 0.4%;
     font-family: 'Fredoka One';
