@@ -31,17 +31,15 @@ body {
     }
 
 .topnav {
-    background-color: #fff;
-    font-size: 10px;
-    position: center center;
-    margin-left: 0;
-    border: 1px solid #fff;
-    border-radius: 10px 10px 10px 10px;
-    overflow: hidden;
+    min-width: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: -1%;
+    margin-left: -2%;
+    background-color: black;
+    color: white;
+    padding: 0.4%;
     font-family: 'Fredoka One';
-    letter-spacing: 30%;
 }
 .topnav a {
     color: #1E90FF;
@@ -59,7 +57,6 @@ body {
 
 
 header {
-   
     background-size: auto;
     height: 70vh;
     margin: 5%;
@@ -68,6 +65,14 @@ header {
     background-repeat: no-repeat;
     border: 1px solid #fff;
     border-radius: 10px 10px 10px 10px;
+    background-image: url("bg.jpg");
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 10%;
+    width: 80%;
+    min-width: 980px;
+    border: 1px solid #fff;
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
 }
 
 .poster {
