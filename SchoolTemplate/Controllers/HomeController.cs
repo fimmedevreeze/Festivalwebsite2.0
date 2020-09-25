@@ -33,8 +33,12 @@ namespace SchoolTemplate.Controllers
 
         return View();
     }
-
-    [Route("contact")]
+        [Route("info")]
+    public IActionResult Information()
+    {
+           return View();
+    }
+        [Route("contact")]
     public IActionResult Contact()
     {
             return View();
