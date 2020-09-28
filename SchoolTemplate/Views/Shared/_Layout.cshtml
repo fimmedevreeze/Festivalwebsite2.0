@@ -7,28 +7,28 @@
 <body>
 
     <div class="topnav">
-         <h1>Aggaveld<h1>
+        <h1>Aggaveld</h1>
         <img target="topnav" src="https://b.thumbs.redditmedia.com/1qqIssxHIOeOIvQSZxx__JlLkumG90vajUYB-xQNYVA.png" alt="aggaveld" style="width:10%;height:10%;">
-        <a class="inactive" href="/">HOME</a>
-        <a class="inactive" href="/info">INFO</a>
-        <a class="inactive" href="/programma">PROGAMMA</a>
-        <a class="inactive" href="/contact">CONTACT</a>
+        <div><a class="@ViewBag.Home" href="/">HOME</a></div>
+        <div><a class="@ViewBag.Info" href="/info">INFO</a></div>
+        <div><a class="@ViewBag.Programma" href="/programma">PROGAMMA</a></div>
+        <div><a class="@ViewBag.Contact" href="/contact">CONTACT</a></div>
 
     </div>
     @RenderBody()
 
-
     <div class="footer">
-    <div class="instagram">
-        <img src="https://www.freepnglogos.com/uploads/instagram-logo-png-transparent-0.png" alt="Instagrampng" width="70" height="70">
-        <h3>Aggaveld</h3>
-    </div>
-    <div class="facebook">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/480px-Facebook_logo_%28square%29.png" alt="facebookpng" width="50" height="50">
-        <h3>Aggaveld</h3>
-    </div>
+        <div class="instagram">
+            <img src="https://www.freepnglogos.com/uploads/instagram-logo-png-transparent-0.png" alt="Instagrampng" width="70" height="70">
+            <h3>Aggaveld</h3>
+        </div>
+        <div class="facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/480px-Facebook_logo_%28square%29.png" alt="facebookpng" width="50" height="50">
+            <h3>Aggaveld</h3>
+        </div>
     </div>
 </body>
 
 </html>
+
 
