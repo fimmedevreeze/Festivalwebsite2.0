@@ -12,18 +12,19 @@
         </div>
         <div class="topnav">
             <img target="topnav" src="https://image.flaticon.com/icons/png/128/1466/1466134.png" alt="aggaveld" style="width:10%;height:10%;">
-            <div><a class="inactive" href="/">HOME</a></div>
+            <div><a class="@ViewBag.Active" href="/">HOME</a></div>
             <div><img src="https://image.flaticon.com/icons/png/128/1466/1466134.png"></div>
-            <div><a class="inactive" href="/info">INFO</a></div>
+            <div><a class="@ViewBag.Active" href="/info">INFO</a></div>
             <div><img src="https://image.flaticon.com/icons/png/128/1466/1466134.png"></div>
-            <div><a class="inactive" href="/programma">PROGAMMA</a></div>
+            <div><a class="@ViewBag.Active" href="/programma">PROGAMMA</a></div>
             <div><img src="https://image.flaticon.com/icons/png/128/1466/1466134.png"></div>
             <div><a class="@ViewBag.Active" href="/contact">CONTACT</a></div>
             <div><img src="https://image.flaticon.com/icons/png/128/1466/1466134.png"></div>
         </div>
-
         @RenderBody()
-        
+        @{
+            ViewBag.Active = "active";
+        }
     </body>
 
 </html>

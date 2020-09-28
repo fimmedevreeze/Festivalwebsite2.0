@@ -50,19 +50,20 @@ body {
     padding: 0.4%;
     font-family: 'Fredoka One';
 }
-.topnav a {
-    color: #1E90FF;
-    text-align: center;
-    padding: 20px 25px;
-    text-decoration: none;
-    font-size: 15px;
+    .topnav a {
+        color: #1E90FF;
+        text-align: center;
+        padding: 20px 25px;
+        text-decoration: none;
+        font-size: 15px;
+        border-bottom: 2px;
     }
 
 
-.topnav a.active {
-    background-color: #1b2a46;
-    color: white;
-}
+    .topnav a.active {
+        border-bottom-color: #1E90FF;
+        color: white;
+    }
 
 
 header {
