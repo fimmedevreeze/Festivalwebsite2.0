@@ -38,6 +38,11 @@ namespace SchoolTemplate.Controllers
     {
            return View();
     }
+        [Route("programma")]
+    public IActionResult Programma()
+        {
+           return View();
+    }
         [Route("contact")]
     public IActionResult Contact()
     {
