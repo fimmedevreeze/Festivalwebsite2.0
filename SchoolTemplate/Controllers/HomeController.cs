@@ -86,5 +86,35 @@ namespace SchoolTemplate.Controllers
 
         return products;
     }
+
+    private List<Product> GetFestivals()
+        {
+            List<Product> products = new List<Product>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Product p = new Product
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Calorieen = float.Parse(reader["calorieen"].ToString()),
+                            Formaat = reader["Formaat"].ToString(),
+                            Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
+                            Prijs = Decimal.Parse(reader["Prijs"].ToString())
+                        };
+                        products.Add(p);
+                    }
+                }
+            }
+
+            return products;
+        }
     }
 }
