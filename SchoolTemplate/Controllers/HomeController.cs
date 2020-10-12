@@ -11,7 +11,7 @@ namespace SchoolTemplate.Controllers
   public class HomeController : Controller
   {
   
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
+    string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
 
     public IActionResult Index()
     {
