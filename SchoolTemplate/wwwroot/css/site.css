@@ -1,11 +1,11 @@
 ﻿html {
-    background-image: linear-gradient( #D264E9, #6EC6CE );
-    background-repeat: no-repeat;
     Min-height: 100%;
 }
 body {
     font-family: Palatino Linotype;
     margin: 0;
+    background-image: linear-gradient( #D264E9, #6EC6CE );
+    background-repeat: no-repeat;
 }
 
 
@@ -16,9 +16,11 @@ body {
     position: sticky;
 }
 
-.topnav .h1 {
-    color: #f2f2f2;
-}
+    .topnav h1 {
+        color: #f2f2f2;
+        text-align: center;
+        font-size: 50px;
+    }
   
 .topnav a {
     float: left;
@@ -126,15 +128,11 @@ header {
     display: inline-block;
     transition: background-color 0.6s ease;
     position: center center;
-    
-  
-    
+}    
+
+.active, .dot:hover {
+    background-color: #717171;
 }
-
-    .active, .dot:hover {
-        background-image: white;
-    }
-
 
 .fade {
     -webkit-animation-name: fade;
