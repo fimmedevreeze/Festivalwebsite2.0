@@ -48,6 +48,12 @@ namespace SchoolTemplate.Controllers
     {
             return View();
     }
+        [Route("contact")]
+        [HttpPost]
+    public IActionResult Contact(PersonModel model)
+    {
+            return View(model);
+    }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

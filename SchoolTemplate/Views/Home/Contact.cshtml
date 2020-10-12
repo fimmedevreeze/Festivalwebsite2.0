@@ -1,6 +1,27 @@
 ﻿@{
     ViewBag.Contact = "active";
 }
-<header>
+
+@model PersonModel
+@{ 
+    ViewData["Title"] = "Contact";
+}
     <h1>Contact</h1>
-</header>
+@if (Model != null)
+{
+    <p>
+        Uw naam is: @ViewData["Voornaam"] @ViewData["Achternaam"] <br />
+    </p>
+}
+
+<form method="post">
+    <input type="text" name="Voornaam" placeholder="voornaam" /> <br />
+    @Html.ValidationMessageFor(m => m.Achternaam) <br />
+    <input type="text" name="Achternaam" placeholder="Achternaam" /> <br />
+    @Html.ValidationMessageFor(m => m.EMail) <br />
+    <input type="text" name="EMail" placeholder="E-Mail" /> <br />
+    <br />
+    <input type="datetime" name="Geboortedatum" placeholder="GeboorteDatum DD-MM-YYYY" /> <br />
+    <br />
+    <input type="submit" value="Verstuur" /> <br />
+</form>
