@@ -11,18 +11,19 @@ namespace SchoolTemplate.Controllers
   public class HomeController : Controller
   {
   
-    //string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
-    string connectionString = "Server= 172.16.162.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
+    string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor thuis werken//
+    //string connectionString = "Server= 172.16.162.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor op school werken//
 
     public IActionResult Index()
     {
       List<Product> products = new List<Product>();
-      // products = GetProducts();
+            // products = GetProducts();
 
-      return View(GetFestivals());
-    }  
+            return View(GetFestival());
 
-    public IActionResult Privacy()
+        }
+
+        public IActionResult Privacy()
     {
       return View();
     }
@@ -42,8 +43,8 @@ namespace SchoolTemplate.Controllers
         [Route("programma")]
     public IActionResult Programma()
         {
-           return View();
-    }
+            return View(GetFestival());
+        }
         [Route("contact")]
     public IActionResult Contact()
     {
@@ -88,14 +89,14 @@ namespace SchoolTemplate.Controllers
         return products;
     }
 
-    private List<Festival> GetFestivals()
+    private List<Festival> GetFestival()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festival> festival = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from festivals", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -107,13 +108,15 @@ namespace SchoolTemplate.Controllers
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
                             Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            Locatie = reader["Naam"].ToString(),
+                            Wrapper = reader["Naam"].ToString(),
                         };
-                        festivals.Add(f);
+                        festival.Add(f);
                     }
                 }
             }
 
-            return festivals;
+            return festival;
         }
     }
 }
