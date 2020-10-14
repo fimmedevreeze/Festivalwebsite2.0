@@ -108,8 +108,8 @@ namespace SchoolTemplate.Controllers
                             Naam = reader["Naam"].ToString(),
                             Beschrijving = reader["Beschrijving"].ToString(),
                             Datum = DateTime.Parse(reader["Datum"].ToString()),
-                            Locatie = reader["Naam"].ToString(),
-                            Wrapper = reader["Naam"].ToString(),
+                            Locatie = reader["Locatie"].ToString(),
+                            Wrapper = reader["Wrapper"].ToString(),
                         };
                         festival.Add(f);
                     }
