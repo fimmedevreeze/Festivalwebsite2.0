@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="shortcut icon" type="image/png" href="https://b.thumbs.redditmedia.com/1qqIssxHIOeOIvQSZxx__JlLkumG90vajUYB-xQNYVA.png">
 </head>
@@ -9,10 +10,11 @@
 
     <div class="topnav">
         <h1>Aggaveld</h1>
-        <div><a class="@ViewBag.Home" href="/">HOME</a></div>
-        <div><a class="@ViewBag.Info" href="/info">INFO</a></div>
-        <div><a class="@ViewBag.Programma" href="/programma">PROGAMMA</a></div>
-        <div><a class="@ViewBag.Contact" href="/contact">CONTACT</a></div>
+        
+            <div><a class="@ViewBag.Home" href="/">HOME</a></div>
+            <div><a class="@ViewBag.Info" href="/info">INFO</a></div>
+            <div><a class="@ViewBag.Programma" href="/programma">PROGAMMA</a></div>
+            <div><<a class="@ViewBag.Contact" href="/contact">CONTACT</a></div>
         
     </div>
     @RenderBody()
