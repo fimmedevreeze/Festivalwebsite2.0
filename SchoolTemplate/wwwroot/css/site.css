@@ -45,10 +45,11 @@ body {
         color: RGBA(255,255,255,1);
     }
 
-    .topnav a.active {
-        background-image: linear-gradient( RGBA(210,100,233,0), RGBA(210,100,233,0.4));
-        color: RGBA(210,100,233,1)
-    }
+        .topnav a.active {
+            background-image: linear-gradient(RGBA(210,100,233,0), RGBA(210,100,233,0.4));
+            color: RGBA(210,100,233,1);
+            background-color: RGBA(210,100,233,0);
+        }
 
 
 
@@ -142,11 +143,11 @@ header {
     display: inline-block;
     transition: background-color 0.6s ease;
     position: center center;
-}    
-
-.active, .dot:hover {
-    background-color: #717171;
 }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
 
 .fade {
     -webkit-animation-name: fade;
