@@ -11,17 +11,19 @@ namespace SchoolTemplate.Controllers
   public class HomeController : Controller
   {
   
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;";
+    string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor thuis werken//
+    //string connectionString = "Server= 172.16.162.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor op school werken//
 
     public IActionResult Index()
     {
       List<Product> products = new List<Product>();
-      // products = GetProducts();
+            // products = GetProducts();
 
-      return View(products);
-    }  
+            return View(GetFestival());
 
-    public IActionResult Privacy()
+        }
+
+        public IActionResult Privacy()
     {
       return View();
     }
@@ -41,8 +43,8 @@ namespace SchoolTemplate.Controllers
         [Route("programma")]
     public IActionResult Programma()
         {
-           return View();
-    }
+            return View(GetFestival());
+        }
         [Route("contact")]
     public IActionResult Contact()
     {
@@ -93,9 +95,9 @@ namespace SchoolTemplate.Controllers
         return products;
     }
 
-    private List<Product> GetFestivals()
+    private List<Festival> GetFestival()
         {
-            List<Product> products = new List<Product>();
+            List<Festival> festival = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -106,21 +108,21 @@ namespace SchoolTemplate.Controllers
                 {
                     while (reader.Read())
                     {
-                        Product p = new Product
+                        Festival f = new Festival
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
-                            Calorieen = float.Parse(reader["calorieen"].ToString()),
-                            Formaat = reader["Formaat"].ToString(),
-                            Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
-                            Prijs = Decimal.Parse(reader["Prijs"].ToString())
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            Locatie = reader["Locatie"].ToString(),
+                            Wrapper = reader["Wrapper"].ToString(),
                         };
-                        products.Add(p);
+                        festival.Add(f);
                     }
                 }
             }
 
-            return products;
+            return festival;
         }
     }
 }

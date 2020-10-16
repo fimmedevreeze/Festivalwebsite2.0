@@ -1,6 +1,21 @@
-﻿@{
+﻿@using SchoolTemplate.Database
+@model List<Festival>
+
+@{
     ViewBag.Programma = "active";
 }
-<header>
-    <h1>Programma</h1>
-</header>
+
+<body>
+    <header>
+        <h1>Programma</h1>
+
+        @foreach (Festival f in Model)
+        {
+            <h2>@f.Naam</h2>
+            <p>@f.Beschrijving</p>
+            <p>@f.Datum</p>
+            <p>@f.Locatie</p>
+            <img src="@f.Wrapper" style="max-width: 75%; height: auto;">
+        }
+    </header>
+</body>

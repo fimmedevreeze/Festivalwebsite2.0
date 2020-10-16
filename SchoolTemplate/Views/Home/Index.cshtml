@@ -1,49 +1,69 @@
-﻿@{
+﻿@using SchoolTemplate.Database
+@model List<Festival>
+
+@{
     ViewBag.Home = "active";
 }
-<header>
-    <div class="slideshow-container">
+<body>
 
 
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="https://www.travelvalley.nl/uploads/headers/leukste-festivals-zomer.jpg" style="width:100%">
-            <div class="text">Festival 1</div>
+    <header>
+
+
+
+
+
+        <div class="slideshow-container">
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://media.resources.festicket.com/www/admin/uploads/images/Hideoutstudentpromo.jpg" style="width:100%">
+                <div class="text">
+                    @foreach (Festival f in Model)
+                    {
+                        <p>@f.Naam</p>
+                    }
+                </div>
+            </div>
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://media.resources.festicket.com/www/admin/uploads/images/7OTB-Tomorrowland-Picture.jpg" style="width:100%">
+                <div class="text">Festival 2</div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://res.cloudinary.com/simpleview/image/upload/v1528891901/clients/norway/a9d2074e_0fdb_42e2_8837_76ff4b308ed5_e950cb0c-f325-4cff-9e34-d3396a2a8394.jpg" style="width:100%">
+                <div class="text">Festival 3</div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://res.cloudinary.com/simpleview/image/upload/v1528891901/clients/norway/a9d2074e_0fdb_42e2_8837_76ff4b308ed5_e950cb0c-f325-4cff-9e34-d3396a2a8394.jpg" style="width:100%">
+                <div class="text">Festival 4</div>
+
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+
+        <div>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="https://www.travelvalley.nl/uploads/headers/festivals-zomer-2017.jpg" style="width:100%">
-            <div class="text">Festival 2</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="https://www.dutchcowboys.nl/uploads/headers/festival1.jpg" style="width:100%">
-            <div class="text">Festival 3</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="https://www.dutchcowboys.nl/uploads/headers/festival-header.jpg" style="width:100%">
-            <div class="text">Festival 4</div>
-        </div>
-
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-
-
-    <div>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-    </div>
-
-    <script>
+        <script>
             var slideIndex = 1;
             showSlides(slideIndex);
 
@@ -69,9 +89,10 @@
                 }
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
-           
+
             }
-    </script>
+        </script>
 
-</header>
+    </header>
 
+</body>

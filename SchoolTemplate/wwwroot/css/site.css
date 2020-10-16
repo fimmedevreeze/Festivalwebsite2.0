@@ -1,34 +1,44 @@
 ﻿html {
-    background-image: linear-gradient( #D264E9, #6EC6CE );
-    background-repeat: no-repeat;
     Min-height: 100%;
+    min-width:100%;
+    
 }
 body {
     font-family: Palatino Linotype;
+    background-image: linear-gradient( #D264E9, #6EC6CE );
+    background-repeat: no-repeat;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+ 
 }
 
 
 .topnav {
     background-color: #333;
+    width: 100%;
     overflow: hidden;
-    position: -webkit-sticky;
-    position: sticky;
+    text-align: center;
+    position:relative;
 }
 
-.topnav .h1 {
-    color: #f2f2f2;
-}
-  
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+    .topnav h1 {
+        color: #f2f2f2;
+        text-align: center;
+        font-size: 5vh;
+        text-shadow: 4px 4px 8px #FF0000, 4px 4px 8px #0000FF;
+    }
+
+    .topnav a {
+        float:left;
+        color: #f2f2f2;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 2vh;
+        text-shadow: 4px 4px 8px #FF0000, 4px 4px 8px #0000FF;
+        text-align: center;
+    }
 
     .topnav a:hover {
         background-image: linear-gradient( RGBA(255,255,255,0), RGBA(255,255,255,0.4));
@@ -39,6 +49,7 @@ body {
         background-image: linear-gradient( RGBA(210,100,233,0), RGBA(210,100,233,0.4));
         color: RGBA(210,100,233,1)
     }
+
 
 
 .topnav .icon {
@@ -58,6 +69,8 @@ header {
     min-width: 980px;
     display: inline-block;
     border-radius: 10px 10px 10px 10px;
+    text-align: center;
+   
 }
 
 
@@ -83,9 +96,12 @@ header {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+   
     }
 
-
+.prev{
+    left: 0;
+}
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -126,15 +142,11 @@ header {
     display: inline-block;
     transition: background-color 0.6s ease;
     position: center center;
-    
-  
-    
+}    
+
+.active, .dot:hover {
+    background-color: #717171;
 }
-
-    .active, .dot:hover {
-        background-image: white;
-    }
-
 
 .fade {
     -webkit-animation-name: fade;
@@ -188,3 +200,4 @@ header {
     display: inline-block;
    
 }
+
