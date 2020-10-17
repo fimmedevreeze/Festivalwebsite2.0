@@ -1,16 +1,17 @@
-﻿@using SchoolTemplate.Database
-@model List<Festival>
+﻿@model SchoolTemplate.Database.Festival
+
 @{
     ViewBag.Festival = "active";
 }
 
 <body>
     <header>
-        
-        
-            <h1> HALLOO </h1>
-        <p> Alle festival gegevens</p>
-        
+        @{
+            ViewData["Title"] = "Festival";
+        }
+        <h1> @ViewData["id"]</h1>
+        <p> Model.Beschrijving</p>
+
     </header>
 
 </body>
