@@ -11,7 +11,7 @@
 
         @foreach (Festival f in Model)
         {
-            <h2>@f.Naam</h2>
+            <h2><a class="@ViewBag.festival/(id)" href="/festival/(id)">@f.Naam</a></h2>
             <p>@f.Beschrijving</p>
             <p>@f.Datum</p>
             <p>@f.Locatie</p>
