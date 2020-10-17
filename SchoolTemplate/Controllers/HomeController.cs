@@ -8,18 +8,15 @@ using SchoolTemplate.Models;
 
 namespace SchoolTemplate.Controllers
 {
-  public class HomeController : Controller
-  {
-  
-    //string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor thuis werken//
-    string connectionString = "Server= 172.16.160.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor op school werken//
-
-    public IActionResult Index()
+ public class HomeController : Controller
     {
-      List<Product> products = new List<Product>();
-            // products = GetProducts();
 
-            return View(GetFestival());
+    string connectionString = "Server= informatica.st-maartenscollege.nl;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor thuis werken//
+    //string connectionString = "Server= 172.16.160.21;Port=3306;Database=110109;Uid=110109;Pwd=EGNARDeA;"; // voor op school werken//
+
+    
+    public IActionResult Index()
+    {           return View(GetFestival());
 
         }
 
@@ -28,7 +25,7 @@ namespace SchoolTemplate.Controllers
       return View();
     }
 
-        [Route("festival/(id)")]
+        [Route("festival/{id}")]
     public IActionResult Festival(string id)
     {
         ViewData["id"] = id;
@@ -62,37 +59,6 @@ namespace SchoolTemplate.Controllers
     public IActionResult Error()
     {
       return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-
-
-    private List<Product> GetProducts()
-    {
-        List<Product> products = new List<Product>();
-
-        using (MySqlConnection conn = new MySqlConnection(connectionString))
-        {
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand("select * from product", conn);
-
-            using (var reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    Product p = new Product
-                    {
-                        Id = Convert.ToInt32(reader["Id"]),
-                        Naam = reader["Naam"].ToString(),
-                        Calorieen = float.Parse(reader["calorieen"].ToString()),
-                        Formaat = reader["Formaat"].ToString(),
-                        Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
-                        Prijs = Decimal.Parse(reader["Prijs"].ToString())
-                    };
-                    products.Add(p);
-                }
-            }
-        }
-
-        return products;
     }
 
     private List<Festival> GetFestival()
