@@ -54,7 +54,12 @@ namespace SchoolTemplate.Controllers
         [HttpPost]
     public IActionResult Contact(PersonModel model)
     {
+          if(!ModelState.IsValid)
             return View(model);
+
+          SavePerson(model);
+
+            return View();
     }
 
 
