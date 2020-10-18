@@ -1,16 +1,21 @@
 ﻿@model SchoolTemplate.Database.Festival
-
+@{ ViewData["Title"] = "Festival"; }
 @{
     ViewBag.Festival = "active";
 }
 
 <body>
     <header>
-        @{
-            ViewData["Title"] = "Festival";
-        }
-        <h1> @ViewData["id"]</h1>
-        <p> Model.Beschrijving</p>
+
+
+        <h1> @Model.Naam </h1>
+        <iframe width="560" height="315" src="@Model.Trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>   @Model.Beschrijving</p>
+        <p>  Datum: @Model.Datum</p>
+        <p> Prijs Toegangskaart: € @Model.Prijs </p>
+        <img src="@f.Wrapper" style="max-width: 75%; height: auto;">
+       
+
 
     </header>
 

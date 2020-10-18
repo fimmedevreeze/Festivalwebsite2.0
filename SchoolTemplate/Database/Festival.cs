@@ -17,5 +17,10 @@ namespace SchoolTemplate.Database
 
         public string Wrapper { get; set; }
 
+        public Decimal Prijs { get; set; }
+
+        public string Trailer { get; set; }
+       
+
     }
 }

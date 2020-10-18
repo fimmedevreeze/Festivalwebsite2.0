@@ -16,7 +16,7 @@
             <div class="mySlides fade">
                 <div class="numbertext">@(Model.IndexOf(f) + 1) / 4</div>
                 <img src="@f.Wrapper" style="width:100%">
-                <div class="text"><a class="@ViewBag.festival/(id)" href="/festival/(id)">@f.Naam</a></div>
+                <div class="text"><a class="@ViewBag.festival/(id)" href="/festival/(@f.Naam)">@f.Naam</a></div>
             </div>
             }
 

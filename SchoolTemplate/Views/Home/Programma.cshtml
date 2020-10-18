@@ -12,10 +12,13 @@
         @foreach (Festival f in Model)
         {
             <h2><a class="@ViewBag.festival/(id)" href="/festival/(id)">@f.Naam</a></h2>
+            <iframe width="560" height="315" src="@f.Trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>@f.Beschrijving</p>
-            <p>@f.Datum</p>
-            <p>@f.Locatie</p>
+            <p>Datum: @f.Datum</p>
+            <p>Locatie: @f.Locatie</p>
+            <p>Toegansprijs: €@f.Prijs</p>
             <img src="@f.Wrapper" style="max-width: 75%; height: auto;">
+
         }
     </header>
 </body>
