@@ -11,7 +11,7 @@
 
         @foreach (Festival f in Model)
         {
-            <h2><a class="@ViewBag.festival/(id)" href="/festival/(id)">@f.Naam</a></h2>
+            <h2><a class="@ViewBag.festival/(id)" href="/festival/(@f.Naam)">@f.Naam</a></h2>
             <iframe width="560" height="315" src="@f.Trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>@f.Beschrijving</p>
             <p>Datum: @f.Datum</p>
